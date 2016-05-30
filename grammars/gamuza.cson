@@ -1,0 +1,45 @@
+'scopeName': 'source.GAmuza'
+'name': 'GAmuza'
+'fileTypes': ['ga']
+
+'patterns': [
+    {
+        # numbers: 4, 7.2, .0983
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name': 'constant.numeric.GAmuza'
+    },
+    {
+        # Structure
+        'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
+        'captures':
+          '1':
+            'name': 'keyword.control.GAmuza'
+          '2':
+            'name': 'entity.name.function.GAmuza'
+            'name': 'meta.function.GAmuza'
+    },
+    {
+        # Strings Single
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.GAmuza'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.GAmuza'
+        'name': 'string.quoted.single.GAmuza'
+    },
+    {
+        # Strings Double
+        'begin': '\"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.GAmuza'
+        'end': '\"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.GAmuza'
+        'name': 'string.quoted.double.GAmuza'
+    }
+]
