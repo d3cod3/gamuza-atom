@@ -1,4 +1,4 @@
-'scopeName': 'source.GAmuza'
+'scopeName': 'source.ga'
 'name': 'GAmuza'
 'fileTypes': ['ga']
 
@@ -6,40 +6,168 @@
     {
         # numbers: 4, 7.2, .0983
         'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
-        'name': 'constant.numeric.GAmuza'
+        'name': 'constant.numeric.ga'
     },
     {
-        # Structure
-        'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
+        'match': '\\b(?<!\\$)0(b|B)[01]+\\b(?!\\$)'
+        'name': 'constant.numeric.binary.ga'
+    },
+    {
+        'match': '\\b(?<!\\$)0(o|O)?[0-7]+\\b(?!\\$)'
+        'name': 'constant.numeric.octal.ga'
+    },
+    {
+        # HEX numbers: 0x000020
+        'match': '\\b(?<!\\$)0(x|X)[0-9a-fA-F]+\\b(?!\\$)'
+        'name': 'constant.numeric.hexadecimal.ga'
+    },
+    {
         'captures':
           '1':
-            'name': 'keyword.control.GAmuza'
+            'name': 'keyword.control.ga'
           '2':
-            'name': 'entity.name.function.GAmuza'
-            'name': 'meta.function.GAmuza'
+            'name': 'entity.name.function.scope.ga'
+          '3':
+            'name': 'entity.name.function.ga'
+          '4':
+            'name': 'punctuation.definition.parameters.begin.ga'
+          '5':
+            'name': 'variable.parameter.function.ga'
+          '6':
+            'name': 'punctuation.definition.parameters.end.ga'
+        'match': '\\b(function)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
+        'name': 'meta.function.ga'
+    },
+    {
+        'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+        'name': 'constant.numeric.ga'
     },
     {
         # Strings Single
         'begin': '\''
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.GAmuza'
+            'name': 'punctuation.definition.string.begin.ga'
         'end': '\''
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.GAmuza'
-        'name': 'string.quoted.single.GAmuza'
+            'name': 'punctuation.definition.string.end.ga'
+        'name': 'string.quoted.single.ga'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.ga'
+          }
+        ]
     },
     {
         # Strings Double
         'begin': '\"'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.GAmuza'
+            'name': 'punctuation.definition.string.begin.ga'
         'end': '\"'
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.GAmuza'
-        'name': 'string.quoted.double.GAmuza'
-    }
+            'name': 'punctuation.definition.string.end.ga'
+        'name': 'string.quoted.double.ga'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.ga'
+          }
+        ]
+    },º
+    {
+    'begin': '(?<=\\.cdef)\\s*(\\[(=*)\\[)'
+    'beginCaptures':
+      '0':
+        'name': 'string.quoted.other.multiline.ga'
+      '1':
+        'name': 'punctuation.definition.string.begin.ga'
+    'contentName': 'meta.embedded.ga'
+    'end': '(\\]\\2\\])'
+    'endCaptures':
+      '0':
+        'name': 'string.quoted.other.multiline.ga'
+      '1':
+        'name': 'punctuation.definition.string.end.ga'
+    'patterns': [
+      {
+        'include': 'source.c'
+      }
+    ]
+  },
+  {
+    'begin': '(?<!--)\\[(=*)\\['
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.ga'
+    'end': '\\]\\1\\]'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.ga'
+    'name': 'string.quoted.other.multiline.ga'
+  },
+  {
+    'begin': '/\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.ga'
+    'end': '\\*/'
+    'name': 'comment.block.ga'
+  },
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.ga'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.ga'
+        'end': '\\n'
+        'name': 'comment.line.double-slash.ga'
+      }
+    ]
+  },
+  {
+    'match': '\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\\b'
+    'name': 'keyword.control.ga'
+  },
+  {
+    'match': '(?<![^.]\\.|:)\\b(false|nil|true|_G|_VERSION|math\\.(pi|huge))\\b|(?<![.])\\.{3}(?!\\.)'
+    'name': 'constant.language.ga'
+  },
+  {
+    'match': '(?<![^.]\\.|:)\\b(self)\\b'
+    'name': 'variable.language.self.ga'
+  },
+  {
+    'match': '(?<![^.]\\.|:)\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.ga'
+  },
+  {
+    'match': '(?<![^.]\\.|:)\\b(coroutine\\.(create|resume|running|status|wrap|yield)|string\\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|rep|reverse|sub|upper)|table\\.(concat|insert|maxn|remove|sort)|math\\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?)|io\\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\\.(cpath|loaded|loadlib|path|preload|seeall)|debug\\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|traceback))\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.library.ga'
+  },
+  {
+    'match': '\\b(and|or|not)\\b'
+    'name': 'keyword.operator.ga'
+  },
+  {
+    'match': '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.any-method.ga'
+  },
+  {
+    'match': '(?<=[^.]\\.|:)\\b([A-Za-z_]\\w*)'
+    'name': 'variable.other.ga'
+  },
+  {
+    'match': '\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)'
+    'name': 'keyword.operator.ga'
+  }
 ]

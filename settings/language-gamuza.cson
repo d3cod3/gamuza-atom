@@ -1,0 +1,6 @@
+'.source.ga':
+  'editor':
+    'commentStart': '// '
+    'foldEndPattern': '^\\s*\\}|^\\s*\\]|^\\s*\\)'
+    'increaseIndentPattern': '\\b(else|elseif|(local\\s+)?function|then|do|repeat)\\b((?!end).)*$|\\{\\s*$|(?x)\\{ [^}"\']* $| \\[ [^\\]"\']* $| \\( [^)"\']* $'
+    'decreaseIndentPattern': '^\\s*(elseif|else|end,?|\\}\\)?).*$|(?x)^\\s* (\\s* /[*] .* [*]/ \\s*)* [}\\])]'

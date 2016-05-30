@@ -1,7 +1,7 @@
 {
   "name": "gamuza-atom",
   "main": "./lib/gamuza-atom",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "GAmuza IDE package",
   "keywords": [
   ],
