@@ -1,0 +1,18 @@
+{
+  "name": "gamuza-atom",
+  "main": "./lib/gamuza-atom",
+  "version": "0.1.0",
+  "description": "GAmuza IDE package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "gamuza-atom:toggle"
+  },
+  "repository": "https://github.com/atom/gamuza-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
