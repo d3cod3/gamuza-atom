@@ -3,100 +3,80 @@
 'fileTypes': ['ga']
 
 'patterns': [
-    {
-        # numbers: 4, 7.2, .0983
-        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
-        'name': 'constant.numeric.ga'
-    },
-    {
-        'match': '\\b(?<!\\$)0(b|B)[01]+\\b(?!\\$)'
-        'name': 'constant.numeric.binary.ga'
-    },
-    {
-        'match': '\\b(?<!\\$)0(o|O)?[0-7]+\\b(?!\\$)'
-        'name': 'constant.numeric.octal.ga'
-    },
-    {
-        # HEX numbers: 0x000020
-        'match': '\\b(?<!\\$)0(x|X)[0-9a-fA-F]+\\b(?!\\$)'
-        'name': 'constant.numeric.hexadecimal.ga'
-    },
-    {
-        'captures':
-          '1':
-            'name': 'keyword.control.ga'
-          '2':
-            'name': 'entity.name.function.scope.ga'
-          '3':
-            'name': 'entity.name.function.ga'
-          '4':
-            'name': 'punctuation.definition.parameters.begin.ga'
-          '5':
-            'name': 'variable.parameter.function.ga'
-          '6':
-            'name': 'punctuation.definition.parameters.end.ga'
-        'match': '\\b(function)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
-        'name': 'meta.function.ga'
-    },
-    {
-        'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
-        'name': 'constant.numeric.ga'
-    },
-    {
-        # Strings Single
-        'begin': '\''
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.string.begin.ga'
-        'end': '\''
-        'endCaptures':
-          '0':
-            'name': 'punctuation.definition.string.end.ga'
-        'name': 'string.quoted.single.ga'
-        'patterns': [
-          {
-            'match': '\\\\.'
-            'name': 'constant.character.escape.ga'
-          }
-        ]
-    },
-    {
-        # Strings Double
-        'begin': '\"'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.string.begin.ga'
-        'end': '\"'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.definition.string.end.ga'
-        'name': 'string.quoted.double.ga'
-        'patterns': [
-          {
-            'match': '\\\\.'
-            'name': 'constant.character.escape.ga'
-          }
-        ]
-    },º
-    {
-    'begin': '(?<=\\.cdef)\\s*(\\[(=*)\\[)'
-    'beginCaptures':
-      '0':
-        'name': 'string.quoted.other.multiline.ga'
-      '1':
-        'name': 'punctuation.definition.string.begin.ga'
-    'contentName': 'meta.embedded.ga'
-    'end': '(\\]\\2\\])'
-    'endCaptures':
-      '0':
-        'name': 'string.quoted.other.multiline.ga'
-      '1':
-        'name': 'punctuation.definition.string.end.ga'
-    'patterns': [
-      {
-        'include': 'source.c'
-      }
-    ]
+  {
+      # numbers: 4, 7.2, .0983
+      'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+      'name': 'constant.numeric.ga'
+  },
+  {
+      'match': '\\b(?<!\\$)0(b|B)[01]+\\b(?!\\$)'
+      'name': 'constant.numeric.binary.ga'
+  },
+  {
+      'match': '\\b(?<!\\$)0(o|O)?[0-7]+\\b(?!\\$)'
+      'name': 'constant.numeric.octal.ga'
+  },
+  {
+      # HEX numbers: 0x000020
+      'match': '\\b(?<!\\$)0(x|X)[0-9a-fA-F]+\\b(?!\\$)'
+      'name': 'constant.numeric.hexadecimal.ga'
+  },
+  {
+      'captures':
+        '1':
+          'name': 'keyword.control.ga'
+        '2':
+          'name': 'entity.name.function.scope.ga'
+        '3':
+          'name': 'entity.name.function.ga'
+        '4':
+          'name': 'punctuation.definition.parameters.begin.ga'
+        '5':
+          'name': 'variable.parameter.function.ga'
+        '6':
+          'name': 'punctuation.definition.parameters.end.ga'
+      'match': '\\b(function)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
+      'name': 'meta.function.ga'
+  },
+  {
+      'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+      'name': 'constant.numeric.ga'
+  },
+  {
+      # Strings Single
+      'begin': '\''
+      'beginCaptures':
+        '0':
+          'name': 'punctuation.definition.string.begin.ga'
+      'end': '\''
+      'endCaptures':
+        '0':
+          'name': 'punctuation.definition.string.end.ga'
+      'name': 'string.quoted.single.ga'
+      'patterns': [
+        {
+          'match': '\\\\.'
+          'name': 'constant.character.escape.ga'
+        }
+      ]
+  },
+  {
+      # Strings Double
+      'begin': '\"'
+      'beginCaptures':
+        '0':
+          'name': 'punctuation.definition.string.begin.ga'
+      'end': '\"'
+      'endCaptures':
+        '0':
+          'name': 'punctuation.definition.string.end.ga'
+      'name': 'string.quoted.double.ga'
+      'patterns': [
+        {
+          'match': '\\\\.'
+          'name': 'constant.character.escape.ga'
+        }
+      ]
   },
   {
     'begin': '(?<!--)\\[(=*)\\['
