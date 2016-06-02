@@ -2,21 +2,225 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle gamuza-atom",
-        "command": "gamuza-atom:toggle"
+        "label": "launch GAmuza",
+        "command": "gamuza-atom:openGAmuza"
       }
     ]
   },
   "menu": [
     {
-      "label": "Packages",
+      "label": "GAmuza",
       "submenu": [
         {
-          "label": "gamuza-atom",
+          "label": "launch GAmuza",
+          "command": "gamuza-atom:openGAmuza"
+        },
+        {
+          "label": "Preferences...",
+          "command": "gamuza-atom:openGAmuzaPreferences"
+        },
+        {"type": "separator"},
+        {
+          "label": "Script",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "gamuza-atom:toggle"
+              "label": "Compile Script",
+              "command": "gamuza-atom:compileScript"
+            },
+            {
+              "label": "Clear Script",
+              "command": "gamuza-atom:clearScript"
+            },
+            {"type": "separator"},
+            {
+              "label": "Clear Console",
+              "command": "gamuza-atom:clearConsole"
+            }
+          ]
+        },
+        {
+          "label": "Modules",
+          "submenu": [
+            {
+              "label": "Preview",
+              "command": "gamuza-atom:togglePreviewModule"
+            },
+            {
+              "label": "Timeline",
+              "command": "gamuza-atom:toggleTimelineModule"
+            },
+            {
+              "label": "Audio Analysis",
+              "command": "gamuza-atom:toggleAudioAnalysisModule"
+            },
+            {
+              "label": "Arduino",
+              "command": "gamuza-atom:toggleArduinoModule"
+            },
+            {
+              "label": "Mapper",
+              "command": "gamuza-atom:toggleMapperModule"
+            },
+            {"type": "separator"},
+            {
+              "label": "Hide all modules",
+              "command": "gamuza-atom:hideAllModules"
+            }
+          ]
+        },
+        {
+          "label": "Tools",
+          "submenu": [
+            {
+              "label": "Color Correction",
+              "command": "gamuza-atom:toggleColorCorrection"
+            },
+            {
+              "label": "Color Selector",
+              "command": "gamuza-atom:toggleColorSelector"
+            },
+            {
+              "label": "Logger",
+              "command": "gamuza-atom:toggleLogger"
+            },
+            {
+              "label": "Grid Viewer",
+              "command": "gamuza-atom:toggleGridViewer"
+            },
+            {"type": "separator"},
+            {
+              "label": "Archive Sketch",
+              "command": "gamuza-atom:archiveSketch"
+            },
+            {
+              "label": "Export to HTML",
+              "command": "gamuza-atom:exportToHTML"
+            }
+          ]
+        },
+        {
+          "label": "Timeline",
+          "submenu": [
+            {
+              "label": "Cut",
+              "command": "gamuza-atom:timelineCut"
+            },
+            {
+              "label": "Copy",
+              "command": "gamuza-atom:timelineCopy"
+            },
+            {
+              "label": "Paste",
+              "command": "gamuza-atom:timelinePaste"
+            }
+          ]
+        },
+        {
+          "label": "Video",
+          "submenu": [
+            {
+              "label": "Basic Grid Mapping",
+              "submenu": [
+                {
+                  "label": "Edit mapping",
+                  "command": "gamuza-atom:editMapping"
+                },
+                {
+                  "label": "Reset Mapping",
+                  "command": "gamuza-atom:resetMapping"
+                },
+                {"type": "separator"},
+                {
+                  "label": "Keyboard Control",
+                  "command": "gamuza-atom:keyboardControl"
+                },
+                {
+                  "label": "Manual Edit Point ON",
+                  "command": "gamuza-atom:editPointON"
+                },
+                {
+                  "label": "Manual Edit Point OFF",
+                  "command": "gamuza-atom:editPointOFF"
+                },
+                {
+                  "label": "Go To North Point",
+                  "command": "gamuza-atom:gotoNorthPoint"
+                },
+                {
+                  "label": "Go To South Point",
+                  "command": "gamuza-atom:gotoSouthPoint"
+                },
+                {
+                  "label": "Go To East Point",
+                  "command": "gamuza-atom:gotoEastPoint"
+                },
+                {
+                  "label": "Go To West Point",
+                  "command": "gamuza-atom:gotoWestPoint"
+                },
+                {"type": "separator"},
+                {
+                  "label": "Load Mapping",
+                  "command": "gamuza-atom:loadMapping"
+                },
+                {
+                  "label": "Save Mapping",
+                  "command": "gamuza-atom:saveMapping"
+                }
+              ]
+            },
+            {
+              "label": "Mapper Module",
+              "submenu": [
+                {
+                  "label": "Activate/Deactivate",
+                  "command": "gamuza-atom:activateMapper"
+                },
+                {"type": "separator"},
+                {
+                  "label": "Load Mapper Settings",
+                  "command": "gamuza-atom:loadMapperSettings"
+                },
+                {
+                  "label": "Save Mapper Settings",
+                  "command": "gamuza-atom:saveMapperSettings"
+                }
+              ]
+            },
+            {"type": "separator"},
+            {
+              "label": "Toggle Show/Hide Cursor",
+              "command": "gamuza-atom:toggleCursor"
+            },
+            {
+              "label": "Toggle Fullscreen",
+              "command": "gamuza-atom:toggleFullscreen"
+            }
+          ]
+        },
+        {
+          "label": "Help",
+          "submenu": [
+            {
+              "label": "GAmuza Reference",
+              "command": "gamuza-atom:openGAReference"
+            },
+            {
+              "label": "GAmuza Book",
+              "command": "gamuza-atom:openGABook"
+            },
+            {
+              "label": "GAmuza Web",
+              "command": "gamuza-atom:openGAWeb"
+            },
+            {"type": "separator"},
+            {
+              "label": "openFrameworks Web",
+              "command": "gamuza-atom:openOFWeb"
+            },
+            {
+              "label": "ofxAddons Web",
+              "command": "gamuza-atom:openOFXWeb"
             }
           ]
         }

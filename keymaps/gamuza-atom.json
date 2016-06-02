@@ -1,5 +1,28 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "gamuza-atom:toggle"
+    "cmd-k": "gamuza-atom:compileScript",
+    "cmd-shift-0": "gamuza-atom:togglePreviewModule",
+    "cmd-shift-1": "gamuza-atom:toggleTimelineModule",
+    "cmd-shift-2": "gamuza-atom:toggleAudioAnalysisModule",
+    "cmd-shift-5": "gamuza-atom:toggleArduinoModule",
+    "cmd-shift-6": "gamuza-atom:toggleMapperModule",
+    "cmd-shift-h": "gamuza-atom:hideAllModules",
+    "cmd-shift-k": "gamuza-atom:toggleColorCorrection",
+    "cmd-shift-c": "gamuza-atom:toggleColorSelector",
+    "cmd-shift-l": "gamuza-atom:toggleLogger",
+    "ctrl-x": "gamuza-atom:timelineCut",
+    "ctrl-c": "gamuza-atom:timelineCopy",
+    "ctrl-v": "gamuza-atom:timelinePaste",
+    "cmd-p": "gamuza-atom:toggleCursor",
+    "cmd-f": "gamuza-atom:toggleFullscreen",
+    "cmd-shift-e": "gamuza-atom:editMapping",
+    "cmd-shift-r": "gamuza-atom:resetMapping",
+    "cmd-shift-m": "gamuza-atom:keyboardControl",
+    "cmd-shift-enter": "gamuza-atom:editPointON",
+    "cmd-shift-backspace": "gamuza-atom:editPointOFF",
+    "cmd-up": "gamuza-atom:gotoNorthPoint",
+    "cmd-down": "gamuza-atom:gotoSouthPoint",
+    "cmd-right": "gamuza-atom:gotoEastPoint",
+    "cmd-left": "gamuza-atom:gotoWestPoint"
   }
 }
