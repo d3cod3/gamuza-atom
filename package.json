@@ -1,12 +1,18 @@
 {
   "name": "gamuza-atom",
+  "author": "Emanuele Mazza aka n3m3da <n3m3da@d3cod3.org>",
   "main": "./lib/gamuza-atom",
   "version": "0.0.0",
   "description": "GAmuza IDE package",
   "keywords": [
+    "GAmuza",
+    "OF",
+    "openframeworks",
+    "live coding",
+    "lua"
   ],
   "activationCommands": {
-    "atom-workspace": "gamuza-atom:toggle"
+    "atom-workspace": "gamuza-atom:openGAmuza"
   },
   "repository": "https://github.com/d3cod3/gamuza-atom",
   "license": "MIT",
@@ -14,5 +20,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    
   }
 }
