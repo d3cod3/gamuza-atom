@@ -2,7 +2,7 @@
   "name": "gamuza-atom",
   "author": "Emanuele Mazza aka n3m3da <n3m3da@d3cod3.org>",
   "main": "./lib/gamuza-atom",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "GAmuza IDE package",
   "keywords": [
     "GAmuza",
@@ -19,9 +19,7 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "package-dependencies": {
     "tool-bar": "^0.2.0"
   },
