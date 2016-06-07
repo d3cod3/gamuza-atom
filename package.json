@@ -20,6 +20,16 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    
+
+  },
+  "package-dependencies": {
+    "tool-bar": "^0.2.0"
+  },
+  "consumedServices": {
+    "tool-bar": {
+      "versions": {
+        "^0.1.0": "consumeToolBar"
+      }
+    }
   }
 }
