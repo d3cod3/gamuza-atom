@@ -164,3 +164,39 @@
   'math.tanh':
     'prefix': 'tanh',
     'body': 'math.tanh(${0:x})'
+  'bit.tobit':
+    'prefix': 'tobit',
+    'body': 'bit.tobit(${0:x})'
+  'bit.tohex':
+    'prefix': 'tohex',
+    'body': 'bit.tohex(${0:x}, ${1:n})'
+  'bit.bnot':
+    'prefix': 'bnot',
+    'body': 'bit.bnot(${0:x})'
+  'bit.bor':
+    'prefix': 'bor',
+    'body': 'bit.bor(${0:x}, ${1:...})'
+  'bit.band':
+    'prefix': 'band',
+    'body': 'bit.band(${0:x}, ${1:...})'
+  'bit.bxor':
+    'prefix': 'bxor',
+    'body': 'bit.bxor(${0:x}, ${1:...})'
+  'bit.lshift':
+    'prefix': 'lshift',
+    'body': 'bit.lshift(${0:x}, ${1:n})'
+  'bit.rshift':
+    'prefix': 'rshift',
+    'body': 'bit.rshift(${0:x}, ${1:n})'
+  'bit.arshift':
+    'prefix': 'arshift',
+    'body': 'bit.arshift(${0:x}, ${1:n})'
+  'bit.rol':
+    'prefix': 'rol',
+    'body': 'bit.rol(${0:x}, ${1:n})'
+  'bit.ror':
+    'prefix': 'ror',
+    'body': 'bit.ror(${0:x}, ${1:n})'
+  'bit.bswap':
+    'prefix': 'bswap',
+    'body': 'bit.bswap(${0:x})'
