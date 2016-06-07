@@ -1,6 +1,6 @@
 {
   "atom-workspace": {
-    "cmd-k": "gamuza-atom:compileScript",
+    "ctrl-shift-g": "gamuza-atom:openGAmuza",
     "cmd-shift-0": "gamuza-atom:togglePreviewModule",
     "cmd-shift-1": "gamuza-atom:toggleTimelineModule",
     "cmd-shift-2": "gamuza-atom:toggleAudioAnalysisModule",
@@ -14,15 +14,6 @@
     "ctrl-c": "gamuza-atom:timelineCopy",
     "ctrl-v": "gamuza-atom:timelinePaste",
     "cmd-p": "gamuza-atom:toggleCursor",
-    "cmd-f": "gamuza-atom:toggleFullscreen",
-    "cmd-shift-e": "gamuza-atom:editMapping",
-    "cmd-shift-r": "gamuza-atom:resetMapping",
-    "cmd-shift-m": "gamuza-atom:keyboardControl",
-    "cmd-shift-enter": "gamuza-atom:editPointON",
-    "cmd-shift-backspace": "gamuza-atom:editPointOFF",
-    "cmd-up": "gamuza-atom:gotoNorthPoint",
-    "cmd-down": "gamuza-atom:gotoSouthPoint",
-    "cmd-right": "gamuza-atom:gotoEastPoint",
-    "cmd-left": "gamuza-atom:gotoWestPoint"
+    "cmd-f": "gamuza-atom:toggleFullscreen"
   }
 }
