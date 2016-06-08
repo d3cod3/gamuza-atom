@@ -1,5 +1,36 @@
-# gamuza-atom package
+# GAmuza IDE for Atom - an OF/OFX/LUA hybrid modular scripting IDE
 
-A short description of your package.
+## Description
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+[GAmuza](https://github.com/d3cod3/GAmuza) is the integrated development environment for Live Coding/Scripting Prototyping with openFrameworks
+
+This package is a GAmuza development environment for Atom.io.
+
+## Preview
+
+![GAmuza IDE for Atom](http://gamuza.d3cod3.org/_images/gaAtom00.jpg "GAmuza IDE for Atom")
+
+![GAmuza IDE for Atom](http://gamuza.d3cod3.org/_images/gaAtom01.jpg "GAmuza IDE for Atom")
+
+
+The custom toolbar for GAmuza IDE (require `tool-bar` package, see Installation)
+
+![GAmuza Atom Toolbar](http://gamuza.d3cod3.org/gaAtom_toolbar.jpg "GAmuza Atom Toolbar")
+
+## Installation
+
+First you have to install the `tool-bar` package which is required:
+
+```bash
+apm install tool-bar
+```
+
+Then you install the `gamuza-atom` package:
+
+```bash
+apm install tool-bar-atom
+```
+
+## License
+
+The MIT License
