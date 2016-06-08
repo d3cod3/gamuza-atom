@@ -8,14 +8,14 @@ This package is a GAmuza development environment for Atom.io.
 
 ## Preview
 
-![GAmuza IDE for Atom](http://gamuza.d3cod3.org/_images/gaAtom00.jpg "GAmuza IDE for Atom")
+![GAmuza IDE for Atom](http://gamuza.d3cod3.org/graphics/gamuza-atom/gaAtom00.jpg "GAmuza IDE for Atom")
 
-![GAmuza IDE for Atom](http://gamuza.d3cod3.org/_images/gaAtom01.jpg "GAmuza IDE for Atom")
+![GAmuza IDE for Atom](http://gamuza.d3cod3.org/graphics/gamuza-atom/gaAtom01.jpg "GAmuza IDE for Atom")
 
 
 The custom toolbar for GAmuza IDE (require `tool-bar` package, see Installation)
 
-![GAmuza Atom Toolbar](http://gamuza.d3cod3.org/gaAtom_toolbar.jpg "GAmuza Atom Toolbar")
+![GAmuza Atom Toolbar](http://gamuza.d3cod3.org/graphics/gamuza-atom/gaAtom_toolbar.jpg "GAmuza Atom Toolbar")
 
 ## Installation
 
