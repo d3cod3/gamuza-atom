@@ -33,7 +33,7 @@ apm install gamuza-atom
 
 And finally you download this GAmuza release (OSX only for now!):
 
-[GAmuza 1.1.0 build 649](https://gamuza.d3cod3.org/_downloads/GAmuza-0649.zip)
+[GAmuza 1.1.0 build 649](http://gamuza.d3cod3.org/_downloads/GAmuza-0649.zip)
 
 ## License
 
