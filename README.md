@@ -28,7 +28,7 @@ apm install tool-bar
 Then you install the `gamuza-atom` package:
 
 ```bash
-apm install tool-bar-atom
+apm install gamuza-atom
 ```
 
 ## License
